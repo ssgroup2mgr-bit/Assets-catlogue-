@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - SS Traders</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>SS Traders - Admin Panel</h1>
+    </header>
+
+    <div class="container">
+        <div class="stats-box">
+            <h3>Total Products: <span id="totalProducts">0</span></h3>
+        </div>
+
+            <form id="addProductForm" class="admin-form">
+            <h2 id="formTitle">Add New Product</h2>
+            <input type="hidden" id="editProductId"> <input type="hidden" id="existingImageUrl"> <br>
+            
+            <div class="form-group">
+                <label>Product Name</label>
+                <input type="text" id="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Description</label>
+                <textarea id="description" rows="3" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Upload Image</label>
+                <input type="file" id="imageFile" accept="image/*">
+                <small style="color: #666;">(Chunne par automatically ImgBB par upload hogi)</small>
+            </div>
+            
+            <div class="form-group">
+                <label>Price (₹)</label>
+                <input type="number" id="price" required min="0">
+            </div>
+            
+            <div class="form-group">
+                <label>Category</label>
+                <select id="category" required>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Grocery">Grocery</option>
+                    <option value="Fashion">Fashion</option>
+                    <option value="Home">Home</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            
+            <button type="submit" id="submitBtn">Add Product</button>
+            <button type="button" id="cancelEditBtn" style="display:none; background-color: #e74c3c; margin-top: 10px;">Cancel Edit</button>
+        </form>
+
+
+        <hr style="margin: 40px 0; border: 1px solid #ddd;">
+
+        <h2>Manage Products</h2>
+        <div class="filter-section" style="margin-top: 15px;">
+            <select id="adminCategoryFilter">
+                <option value="All">All Categories</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Grocery">Grocery</option>
+                <option value="Fashion">Fashion</option>
+                <option value="Home">Home</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        
+        <div style="overflow-x:auto;">
+            <table id="adminProductTable">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="adminProductContainer">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script type="module" src="admin.js"></script>
+</body>
+</html>
