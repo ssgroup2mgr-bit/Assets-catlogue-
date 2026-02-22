@@ -2,7 +2,7 @@ import { db } from './firebase-config.js';
 import { collection, addDoc, serverTimestamp, onSnapshot, query, orderBy, doc, deleteDoc, updateDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
 // YAHAN APNI IMGBB API KEY DAALEIN 👇
-const IMGBB_API_KEY = "7f3b143fbfa5a5491369ad6884a1c407"; 
+const IMGBB_API_KEY = "a08956dace616cbc26f1a9bd67e5a5eb"; 
 
 const form = document.getElementById('addProductForm');
 const submitBtn = document.getElementById('submitBtn');
