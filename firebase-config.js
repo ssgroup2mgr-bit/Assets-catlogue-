@@ -2,14 +2,16 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebas
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
 // Apni Firebase configuration yahan daalein
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDeO8uhUVWP98NrhSyZ-oTImjKB0GDDe6M",
-  authDomain: "nano-c5292.firebaseapp.com",
-  databaseURL: "https://nano-c5292-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "nano-c5292",
-  storageBucket: "nano-c5292.firebasestorage.app",
-  messagingSenderId: "772738888247",
-  appId: "1:772738888247:web:4d6733b30e0ac9e27d05b2"
+  apiKey: "AIzaSyAcBb5Zdtps4dEkL43jrngMBAZ5xI6KhiQ",
+  authDomain: "sstradersbill-108c1.firebaseapp.com",
+  databaseURL: "https://sstradersbill-108c1-default-rtdb.firebaseio.com",
+  projectId: "sstradersbill-108c1",
+  storageBucket: "sstradersbill-108c1.firebasestorage.app",
+  messagingSenderId: "1071080469005",
+  appId: "1:1071080469005:web:991c0e9ccd898a6b395b44",
+  measurementId: "G-DE6PVF37SF"
 };
 
 // Initialize Firebase
